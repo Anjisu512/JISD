@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<!-- Thymeleaf 이용하기위해 네임스페이스 지정하기 -->
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{layout/mainlayout.html}">
+<head>
+ <link rel="stylesheet" th:href="@{/css/home.css}" />
+</head>
+
+<!-- Content -->
+<div layout:fragment="content">
+ 
+  <div class="content">
+ 
+ 	1
+  </div>
+  
+
+</div>
+<script layout:fragment="script" th:inline="javascript">
+	
+</script>
+
+</html>
+ 

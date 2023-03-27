@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+      	  
+<head>
+	<meta charset="UTF-8">
+	<title>JSD</title> 
+    <th:block th:replace="common/csslink :: csslinkFragment"></th:block>
+</head>
+<body>
+<!-- 본문 컨텐츠 넣는곳 -->
+
+ 	<!-- header fragment 사용 -->
+    <th:block th:replace="fragments/header :: headerFragment"></th:block>
+    
+    
+    <!-- content fragment 사용 -->
+    <th:block layout:fragment="content"></th:block>
+    
+    <!-- footer fragment 사용 -->
+    <th:block th:replace="fragments/footer :: footerFragment"></th:block>
+
+
+ 
+ 
+ 
+ 	<!-- 공통js -->
+ 	<th:block th:replace="common/scriptsrc :: scriptsrcFragment"></th:block>
+ 	
+ 	<!-- 별개js -->
+	<th:block layout:fragment="script"></th:block>
+</body>
+</html>
+ 
+

@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+.logo-btn{
+	display: flex;
+	text-decoration: none;
+}
+										/*header*/
+.header{
+	position: relative;
+    background-image: url(../img/loby.png);                                                               
+    height:90vh;
+    background-size: cover;
+}
+ 
+ 
+
+.header-main{
+	display:flex;
+	font-size: 20px;
+	padding-top : 40px;
+	color: white;
+}
+
+.header-icon{
+	font-size: 60px;
+	margin-left: 120px;
+	vertical-align: middle;
+	color: white;
+	
+}
+.header-text{
+	font-size: 40px;
+	padding-left: 10px;
+	color: white;
+
+}
+.header-menu{
+	display:flex;	
+	padding-top:15px;
+	padding-right:15px;
+	margin-left: auto;
+	position: absolute;
+     top:3%;
+     left:86%;
+     transform: translate(-50%, -50%);                                                                   
+     font-size:5rem;
+     color: white;
+     z-index: 2;
+     text-align: center;
+}
+.header-menu-item{
+	padding-left: 5px;
+	font-size: 15px;
+	text-decoration: none;
+	color: white;
+}
+.header-menu-item:hover{
+	color: #CCCCFF;
+}
+										/* nav */
+.navbar-menu{
+ 	display:flex;		
+	position: absolute;
+     top:12%;
+     left:50%;
+     transform: translate(-50%, -50%);                                                                   
+     font-size:5rem;
+     color: white;
+     z-index: 2;
+     word-spacing: 10px;
+}
+.navbar-menu-item{	
+	padding-left : 45px;
+	margin: 0 auto;
+	font-size: 20px;
+	text-decoration: none;
+	color: white;
+}
+
+.navbar-menu-item::after {
+	 margin-left : 45px;
+	 margin-top :-10px;
+	content:""; 
+	display: block; 
+	border-bottom: 3px solid white; 
+	transition: all 250ms ease-out;  
+	width: 0;
+	}
+.navbar-menu-item:hover::after {
+ 	margin-left : 45px;
+	transition: all 250ms ease-out;
+	margin-top :-10px;
+	width: 65%;
+	
+	}
+											/*a태그 밑줄제거*/
+.navbar-menu-item:hover,
+.header-icon:hover,
+.header-text:hover{
+	color: white;
+	text-decoration: none;
+}

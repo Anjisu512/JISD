@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+.header{
+	height: 20vh; 
+	background-image: url(../img/color.jpg); 
+	background-repeat : no-repeat;
+    background-size : 100% 30vh;   
+}
+.navbar-menu{
+	top:52%;
+	left:950px;
+}	

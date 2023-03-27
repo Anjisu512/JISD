@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<!-- Thymeleaf 이용하기위해 네임스페이스 지정하기 -->
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{layout/mainlayout.html}">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" th:href="@{/css/customer.css}">
+<title>JSD</title>
+
+<div layout:fragment="content">
+	<div class="content">
+		LIST
+	</div>
+</div>
+<script layout:fragment="script" th:inline="javascript">
+	
+</script>
+
+</html>
+ 

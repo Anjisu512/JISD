@@ -1,0 +1,32 @@
+<html xmlns:th="http://www.thymeleaf.org" >
+
+<div class="header" th:fragment="headerFragment">
+
+	<!-- header -->
+	<div class="header-main">
+		<a class="logo-btn"th:href="@{/}">
+			<ion-icon class="header-icon" name="bed-outline"></ion-icon>
+			<div class="header-text">JSD</div>
+		</a>
+		<div class="header-menu">
+			<div><a class="header-menu-item" th:href="@{/join}">회원가입</a></div>
+			<div><a class="header-menu-item" th:href="@{/login}">로그인</a></div>
+			<div><a class="header-menu-item" th:href="@{/logout}">로그아웃</a></div>
+			<div><a class="header-menu-item" th:href="@{/admin/}">관리자</a></div>
+		</div>
+	</div>
+	<!-- navbar -->
+	<div class="navbar-menu" th:fragment="navbarFragment">
+		<div><a class="navbar-menu-item" th:href="@{/info}">회사소개</a></div>
+		<div><a class="navbar-menu-item" th:href="@{/room/list}">숙소보기</a></div>
+		<div><a class="navbar-menu-item" th:href="@{/room/reservation}">예약하기</a></div>
+		<div><a class="navbar-menu-item" th:href="@{/room/}">예약확인</a></div>
+		<div><a class="navbar-menu-item" th:href="@{/comunity/list}">커뮤니티</a></div>
+		<div><a class="navbar-menu-item" th:href="@{/customer/list}">고객센터</a></div>
+	</div>
+
+
+</div>
+</html>
+
+</html>
