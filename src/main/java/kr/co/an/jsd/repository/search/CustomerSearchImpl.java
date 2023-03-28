@@ -37,6 +37,9 @@ public class CustomerSearchImpl extends QuerydslRepositorySupport implements Cus
 					case "c":
 						booleanBuilder.or(customer.content.contains(keyword));
 						break;
+					case "w":
+						booleanBuilder.or(customer.writer.contains(keyword));
+						break;
 		               }
 	            }//end for
 	            query.where(booleanBuilder);

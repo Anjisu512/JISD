@@ -2,14 +2,48 @@
 
 <!-- Thymeleaf 이용하기위해 네임스페이스 지정하기 -->
 <html xmlns:th="http://www.thymeleaf.org"
-	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-	  layout:decorate="~{layout/mainlayout.html}">
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout/mainlayout.html}">
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{/css/customer.css}">
+<title>JSD</title>
 </head>
-<body>
+<div layout:fragment="content">
+	<h1>&nbsp;&nbsp;&nbsp;고객센터</h1>
+	<div class="customer-register-main">
+		<form action="/customer/register" method="post" id="customerForm"  >
+			<div class="customer-reg-title">
+				<span class="customer-span-title">제목</span> 
+				<input type="text" name="title" class="customer-input-title" placeholder="제목을 입력하세요">
+			</div>
+			<div class="customer-reg-writer">
+				<span class="customer-span-writer">작성자</span>
+				<input type="text" name="writer" class="customer-input-title"/>		
+			</div>
+			<div class="customer-reg-content">
+				<div class="customer-span-content">내용</div>
+				<textarea type="text" name="content" class="" placeholder="내용을 입력하세요"></textarea>
+			</div>
+			<input type="hidden" name="cstate" value="1" readonly/>
+			<!-- 입력form end -->
+			
+			<div class="">
+				<div class="customerForm-btn">
+					<button type="submit" class="btn btn-primary regBtn">작성완료</button>
+					<button type="button" class="btn btn-secondary listBtn">목록</button>
+				</div>
+			</div>
+		</form>
+		<!-- 등록form 종료 -->
+	</div>
+</div>
+<script layout:fragment="script" th:inline="javascript">
+//목록으로 이동
+	document.querySelector(".listBtn").addEventListener("click", function(e){
+	e.preventDefault()
+	e.stopPropagation()
 
-</body>
-</html>
- 
+	self.location =`/customer/list`
+	}, false)
+</script>

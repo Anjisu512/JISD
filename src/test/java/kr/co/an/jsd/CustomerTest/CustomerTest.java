@@ -31,7 +31,7 @@ public class CustomerTest {
 	//등록테스트
 	@Test
 	public void register() {
-		IntStream.rangeClosed(1, 24).forEach(i ->{
+		IntStream.rangeClosed(1, 240).forEach(i ->{
 			Customer customer = Customer.builder()
 					.title("title..."+i)
 					.content("content..."+i)
